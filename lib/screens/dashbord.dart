@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_image_stack/flutter_image_stack.dart';
 import 'package:intl/intl.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
-import 'package:ui/widgets/expense_graph.dart';
+import 'package:ui/widgets/graph.dart';
 
 class DetailPage extends StatefulWidget {
   
-    final DateTime selectedDate; // New property to store selected date
+    final DateTime selectedDate; 
 
   final Color color;
   final IconData icon;
@@ -208,13 +208,13 @@ class _DetailPageState extends State<DetailPage> {
   
   Color _getProgressColor(double percentValue) {
   if (percentValue <= 0.25) {
-    return Colors.red; // Example color for lower percentage
+    return Colors.red; 
   } else if (percentValue <= 0.5) {
-    return Colors.orange; // Example color for mid-range percentage
+    return Colors.orange; 
   } else if (percentValue <= 0.75) {
-    return const Color.fromARGB(255, 59, 173, 255); // Example color for higher mid-range percentage
+    return const Color.fromARGB(255, 59, 173, 255); 
   } else {
-    return Colors.green; // Example color for higher percentage
+    return Colors.green;
   }
 }
 }

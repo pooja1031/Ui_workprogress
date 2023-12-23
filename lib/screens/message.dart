@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ui/widgets/expense_graph.dart';
 
 class Message extends StatefulWidget {
   const Message({Key? key}) : super(key: key);

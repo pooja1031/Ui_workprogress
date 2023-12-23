@@ -14,9 +14,8 @@ class Projects extends StatefulWidget {
 class _ProjectsState extends State<Projects> with TickerProviderStateMixin {
   
    late TabController tabController;
-   late DateTime selectedDate1; // Initialize with the current date
-  late DateTime selectedDate2; // Initialize with the current date
-
+   late DateTime selectedDate1; 
+  late DateTime selectedDate2; 
 final List<Color> cardColors = [
     Colors.white,
     Colors.white,
@@ -69,14 +68,13 @@ final List<Color> cardColors = [
   void initState() {
     super.initState();
     tabController = TabController(length: 3, vsync: this);
-    selectedDate1 = DateTime.now(); // Initialize selectedDate1 with the current date
-    selectedDate2 = DateTime.now(); // Initialize selectedDate2 with the current date
+    selectedDate1 = DateTime.now(); 
+    selectedDate2 = DateTime.now(); 
   }
 
   @override
   Widget build(BuildContext context) {
-        double containerWidth = MediaQuery.of(context).size.width * 0.9; // Adjust the percentage as needed
-
+        double containerWidth = MediaQuery.of(context).size.width * 0.9; 
     return SafeArea(
       child: Scaffold(
         body: Padding(
@@ -99,7 +97,7 @@ final List<Color> cardColors = [
               SizedBox(height: 20,),
            Row(
       children: [
-      SizedBox(width: 10), // Add left space here, adjust the width as needed
+      SizedBox(width: 10), 
       Text(
         "Projects",
         style: TextStyle(
@@ -166,21 +164,21 @@ final List<Color> cardColors = [
                 SizedBox(height: 20),
                 
                           
-                          // Content for the 'All' tab
+                          
                           Center(
                             child: Text(
                               "All Tab Content",
                               style: TextStyle(fontSize: 20),
                             ),
                           ),
-                          // Content for the 'Ongoing' tab
+                         
                           Center(
                             child: Text(
                               "Ongoing Tab Content",
                               style: TextStyle(fontSize: 20),
                             ),
                           ),
-                          // Content for the 'Completed' tab
+                          
                           Center(
                             child: Text(
                               "Completed Tab Content",
@@ -219,14 +217,14 @@ final List<Color> cardColors = [
       );
     },
       child: SizedBox(
-            width: 610, // Set the desired width
-      height: 300, // Set the desired height
+            width: 610, 
+      height: 300, 
     
         child: Card(
           elevation: 3,
           color: Colors.white,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start, // Align text at the start
+            mainAxisAlignment: MainAxisAlignment.start, 
           crossAxisAlignment: CrossAxisAlignment.start,             children: [
               // Icon(
               //   icon,
@@ -326,13 +324,13 @@ final List<Color> cardColors = [
 
 Color _getProgressColor(double percentValue) {
   if (percentValue <= 0.25) {
-    return Colors.red; // Example color for lower percentage
+    return Colors.red; 
   } else if (percentValue <= 0.5) {
-    return Colors.orange; // Example color for mid-range percentage
+    return Colors.orange; 
   } else if (percentValue <= 0.75) {
-    return const Color.fromARGB(255, 59, 173, 255); // Example color for higher mid-range percentage
+    return const Color.fromARGB(255, 59, 173, 255); 
   } else {
-    return Colors.green; // Example color for higher percentage
+    return Colors.green; 
   }
 }
 }

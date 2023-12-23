@@ -20,7 +20,7 @@ class ImageStack extends StatelessWidget {
           imageList[i],
         if (trailingIcon != null)
           Padding(
-            padding: const EdgeInsets.only(left: 2), // Adjust the spacing for the trailing icon
+            padding: const EdgeInsets.only(left: 2), 
             child: Icon(trailingIcon, size: 24),
           ),
       ],

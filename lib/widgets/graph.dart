@@ -34,7 +34,7 @@ class _ExpenseGraphDesignState extends State<ExpenseGraphDesign> {
     double maxY = getMaxYValue(spots);
 
     return Container(
-      height: 300, // Adjust the height according to your requirements
+      height: 300, 
       padding: const EdgeInsets.all(16.0),
       child: LineChart(
         LineChartData(
@@ -64,7 +64,6 @@ class _ExpenseGraphDesignState extends State<ExpenseGraphDesign> {
                 ),
               ),
               dotData: FlDotData(show: false),
-              // Show y-values inside the line
               showingIndicators: List.generate(spots.length, (index) => index),
             ),
           ],
